@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yumang.seekbardemo.MainActivity">
+
+
+
+
+    <!--<SeekBar-->
+        <!--android:id="@+id/seekBar1"-->
+        <!--android:layout_width="326dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--/>-->
+    <!---->
+
+    <com.example.yumang.seekbardemo.CustomSeekbar
+        android:id="@+id/myCustomSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14.33dp"
+        android:layout_marginRight="10.33dp"
+        android:layout_marginTop="100dp"
+
+        />
+
+
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

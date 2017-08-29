@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_txt_blue">#FF0B63FF</color>
+    <color name="color_txt_white">#FFFFFFFF</color>
+    <color name="color_txt_gray">#D4D4D4 </color>
+    <color name="color_bg_normal">#FFD4D4D9</color>
+    <color name="color_bg_press">#FFC4C4C9</color>
+    <color name="color_dlg_line">#FFB6B6B6</color>
+    <color name="color_bg_half_transparent">#88D4D4D9</color>
+
+    <!--vitamio相关-->
+    <color name="transparent">#00000000</color>
+    <color name="mediacontroller_bg_pressed">#ff53c1bd</color>
+    <color name="mediacontroller_bg">#99000000</color>
+
+
+</resources>

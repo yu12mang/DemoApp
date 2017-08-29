@@ -1,0 +1,415 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+#不预校验，如果需要预校验，是-dontoptimize
+-dontpreverify
+-flattenpackagehierarchy
+ #指定代码压缩级别
+-optimizationpasses 5
+#混淆时不会产生形形色色的类名
+#-dontusemixedcaseclassnames
+#跳过(不混淆) jars中的 非public classes
+#-dontskipnonpubliclibraryclasses
+#不跳过(混淆) jars中的 非public classes   默认选项
+-dontskipnonpubliclibraryclassmembers
+#混淆时记录日志
+-verbose
+#优化
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+# 设置不删除未引用的资源(类，方法等)
+-dontshrink
+#屏蔽警告
+-ignorewarnings
+
+
+-keepattributes *Annotation*
+-keep public class com.google.vending.licensing.ILicensingService
+-keep public class com.android.vending.licensing.ILicensingService
+
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+-keepclassmembers class * extends android.app.Activity {
+   public void *(android.view.View);
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+
+-keep class **.R$* {   
+    *;   
+}
+
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+-keep class * extends android.view.View{*;}
+-keep class * extends android.app.Dialog{*;}
+-keep class * extends android.app.AlertDialog{*;}
+-keep class * extends android.app.ProgressDialog{*;}
+
+-keep class * implements java.io.Serializable{*;}
+
+
+#V4 包
+-dontwarn android.support.**
+-keep interface android.support.v4.app.** { *; }
+-keep class android.support.v4.** { *; }
+-keep public class * extends android.support.v4.**
+-keep public class * extends android.app.Fragment
+
+-keep class android.net.http.SslError
+
+-keepclassmembers class * extends android.webkit.WebChromeClient {
+    public void openFileChooser(android.webkit.ValueCallback, java.lang.String, java.lang.String);
+}
+
+-keep class android.webkit.**{*;}
+
+#ShareSDK包安装
+-dontwarn cn.sharesdk.**
+-keep class cn.sharesdk.**{*;}
+
+-dontwarn com.mob.**
+-keep class com.mob.**{*;}
+
+-dontwarn com.sina.**
+-keep class com.sina.**{*;}
+
+#-keep class m.framework.**{*;}
+
+#-libraryjars libs/Android_3DMap_V2.4.0.jar
+#-libraryjars libs/Android_Location_V1.3.0.jar
+#-libraryjars libs/Android_Navi_V1.1.1.jar
+#-libraryjars libs/AMap_Services_V2.3.0.jar
+
+-dontwarn com.amap.api.**
+-dontwarn com.aps.**
+#高德相关混淆文件
+#3D 地图
+-keep class com.amap.api.maps.**{*;} 
+-keep class com.autonavi.amap.mapcore.*{*;}
+#Location
+-keep   class com.amap.api.location.**{*;} 
+-keep   class com.aps.**{*;} 
+#Service
+-keep class com.amap.api.services.**{*;}
+#导航
+-keep class com.amap.api.navi.**{*;}
+-keep class com.autonavi.**{*;}
+#讯飞语音
+-keep class com.iflytek.**{*;}
+
+#-libraryjars /libs/admsAppLibrary.jar
+#-libraryjars /libs/android-async-http-1.4.5.jar
+#-libraryjars /libs/core.jar
+#-libraryjars /libs/DriveRatingLib.jar
+#-libraryjars /libs/sunjce_provider.jar
+
+-dontwarn com.sun.crypto.provider.**
+-keep class com.sun.crypto.provider.**{*;}
+
+ #pulltorefreshlibrary 下拉与上拉刷新
+-dontwarn com.handmark.pulltorefresh.library.**
+-keep class com.handmark.pulltorefresh.library.**{*;}
+
+ #pulltorefreshlibrary 下拉与上拉刷新
+-dontwarn com.handmark.pulltorefresh.library.**
+-keep class com.handmark.pulltorefresh.library.**{*;}
+
+ #Bson不混淆
+-dontwarn org.bson.**
+-keep class org.bson.**{*;}
+
+ #com.squareup 混淆
+-dontwarn com.squareup.**
+-keep class com.squareup.**{*;}
+
+-keep class com.buick.com.tutk.utils.download.**{*;}
+
+
+#Xutils 只有ViewInject的jar包
+-keep class * extends java.lang.annotation.Annotation { *; }
+-dontwarn com.lidroid.xutils.**
+-keep class com.lidroid.xutils.** { *; }
+
+#FastJson
+-dontwarn com.alibaba.fastjson.**
+-keep class com.alibaba.fastjson.** { *; }
+
+#保留所有的bean
+-keep class com.buick.bean.** { *; }
+-keep class com.x5.websocket.ibuick.** { *; }
+-keepclasseswithmembernames class com.x5.websocket.ibuick.** {*;}
+
+#保留支持照片的类
+#-dontwarn uk.co.senab.photoview.**
+#-keep class uk.co.senab.photoview.** { *; }
+
+#行车记录仪不参与混淆
+#-libraryjars libs/ActionBarSherlockLibrary.jar
+#-dontwarn  com.actionbarsherlocklibrary.**
+#-keep class com.actionbarsherlocklibrary.** {*;}
+-keep class com.actionbarsherlock.** { *; }
+-keep interface com.actionbarsherlock.** { *; }
+
+-keep class com.example.avioctrldefine.** {*;}
+-keep class com.tutk.IOTC.Camera.** {*;}
+-keep interface com.tutk.IOTC.Camera.** { *; }
+-keep class com.tutk.Logger.** {*;}
+-keep class org.bouncycastle.** {*;}
+-keep class org.apache.commons.codec.** {*;}
+-keep class org.apache.commons.logging.** {*;}
+-keep class com.dropbox.client2.** {*;}
+-keep class org.apache.http.entity.mime.** {*;}
+-keep class com.android.codec.avc.** {*;}
+-keep class com.decoder.util.** {*;}
+-keep class com.encoder.util.** {*;}
+-keep class com.sinaapp.bashell.** {*;}
+
+-keep class com.tutk.IOTC.** {*;}
+-keep class com.tutk.fdk.** {*;}
+-keep class com.tutk.mp4v2.** {*;}
+-keep class com.tutk.SLC.** {*;}
+-keep class com.tutk.SLC.** {*;}
+-keep class com.viewpagerindicator.** {*;}
+-keep class org.json.simple.parser.** {*;}
+-keep class org.json.simple.** {*;}
+-keep class assets.frontia_plugin.** {*;}
+-keep class com.baidu.** {*;}
+-keep class com.jeremyfeinstein.slidingmenu.lib.** {*;}
+-keep class com.umeng.analytics.** {*;}
+
+-keep class io.vov.vitamio.** {*;}
+-keep public class io.vov.vitamio.MediaPlayer { *; }
+-keep public class io.vov.vitamio.IMediaScannerService { *; }
+-keep public class io.vov.vitamio.MediaScanner { *; }
+-keep public class io.vov.vitamio.MediaScannerClient { *; }
+-keep public class io.vov.vitamio.VitamioLicense { *; }
+-keep public class io.vov.vitamio.Vitamio { *; }
+-keep public class io.vov.vitamio.MediaMetadataRetriever { *; }
+
+-keep class addition.TUTK.** {*;}
+-keep class com.tutk.P2PCam264.DELUX.AddDeviceActivity.** {*;}
+
+-keep class appteam.** {*;}
+-keep class com.baidu.push.** {*;}
+-keep class com.hichip.** {*;}
+-keep class com.tutk.customized.command.** {*;}
+-keep class com.tutk.Kalay.settings.** {*;}
+-keep class com.tutk.P2PCam264.** {*;}
+-keep class com.tutk.P2PCam264.object.DeviceInfo.** {*;}
+-keep class com.tutk.P2PCam264.DELUX.LiveViewActivity.** {*;}
+-keep class com.tutk.P2PCam264.DELUX.** {*;}
+-keep class com.tutk.P2PCam264.image.** {*;}
+-keep class com.tutk.P2PCam264.ui.** {*;}
+-keep class general.** {*;}
+#行车记录仪不参与混淆
+
+#novatek不参与混淆
+-keep class com.ntk.nvtkit.** {*;}
+-keep class com.ntk.album.** {*;}
+-keep class com.ntk.util.** {*;}
+-keep class com.tools.encryption.** {*;}
+-keep class com.tools.SocketCallback.** {*;}
+-keep class com.tools.SocketCallback.PostListener {*;}
+-keep class com.tools.SocketCallback.SocketCallback {*;}
+-keep class com.tools.verify.** {*;}
+-keep class com.tools.verify.CheckSN {*;}
+-keep class com.tools.wifiListener.**{*;}
+-keep class com.tools.wifiListener.WiFiApService {*;}
+-keep class com.tools.wifiListener.WifiAdmin {*;}
+-keep class com.tools.wifiListener.WifiApCallback {*;}
+-keep class com.ntk.module.erroe.** {*;}
+-keep class com.ntk.module.erroe.ErrorCode {*;}
+-keep class com.ntk.module.function.** {*;}
+-keep class com.ntk.module.function.XmlParser {*;}
+-keep class com.ntk.module.function.NovatekAPI {*;}
+-keep class com.ntk.RTSPCMDs {*;}
+-keep class com.tutk.Rtsp.** {*;}
+-keep class org.videolan.libvlc.** {*;}
+#novatek不参与混淆
+
+#报错跟踪不参与混淆
+-dontwarn com.tencent.bugly.**
+-keep public class com.tencent.bugly.**{*;}
+#报错跟踪不参与混淆
+
+-keep public class com.buick.R$*{
+    public static final int *;
+}
+
+-keep public class com.buick.activity.Start{ *; }
+-keep public class com.buick.activity.MeFragment.**{ *; }
+-keep public class com.buick.activity.CarFragment{ *; }
+-keep public class com.buick.activity.MainServiceFragment{ *; }
+
+-keep public class com.buick.activity.UserGuideDetailActivity4$JsToJava {
+	public void receiveTitle(java.lang.String);
+	public void receiveGroup(java.lang.String);
+}
+
+# arthur add, for 新闻栏目的数据传递
+
+-keepclassmembers class com.buick.bean.JSUserInfo {
+	java.lang.String getDeviceNo();
+	java.lang.String getUserID();
+	java.lang.String getSessionID();
+}
+
+#-libraryjars /libs/fastjson-1.2.2.jar
+
+
+
+# ProGuard configurations for NetworkBench Lens
+-keep class com.networkbench.** { *; }
+-dontwarn com.networkbench.**
+-keepattributes Exceptions, Signature, InnerClasses
+
+-assumenosideeffects public class java.lang.* extends java.lang.Number {
+    public static java.lang.String toString(byte);
+    public static java.lang.Byte valueOf(byte);
+    public static byte parseByte(java.lang.String);
+    public static byte parseByte(java.lang.String,int);
+    public static java.lang.Byte valueOf(java.lang.String,int);
+    public static java.lang.Byte valueOf(java.lang.String);
+    public static java.lang.Byte decode(java.lang.String);
+    public int compareTo(java.lang.Byte);
+    public static java.lang.String toString(short);
+    public static short parseShort(java.lang.String);
+    public static short parseShort(java.lang.String,int);
+    public static java.lang.Short valueOf(java.lang.String,int);
+    public static java.lang.Short valueOf(java.lang.String);
+    public static java.lang.Short valueOf(short);
+    public static java.lang.Short decode(java.lang.String);
+    public static short reverseBytes(short);
+    public int compareTo(java.lang.Short);
+    public static java.lang.String toString(int,int);
+    public static java.lang.String toHexString(int);
+    public static java.lang.String toOctalString(int);
+    public static java.lang.String toBinaryString(int);
+    public static java.lang.String toString(int);
+    public static int parseInt(java.lang.String,int);
+    public static int parseInt(java.lang.String);
+    public static java.lang.Integer valueOf(java.lang.String,int);
+    public static java.lang.Integer valueOf(java.lang.String);
+    public static java.lang.Integer valueOf(int);
+    public static java.lang.Integer getInteger(java.lang.String);
+    public static java.lang.Integer getInteger(java.lang.String,int);
+    public static java.lang.Integer getInteger(java.lang.String,java.lang.Integer);
+    public static java.lang.Integer decode(java.lang.String);
+    public static int highestOneBit(int);
+    public static int lowestOneBit(int);
+    public static int numberOfLeadingZeros(int);
+    public static int numberOfTrailingZeros(int);
+    public static int bitCount(int);
+    public static int rotateLeft(int,int);
+    public static int rotateRight(int,int);
+    public static int reverse(int);
+    public static int signum(int);
+    public static int reverseBytes(int);
+    public int compareTo(java.lang.Integer);
+    public static java.lang.String toString(long,int);
+    public static java.lang.String toHexString(long);
+    public static java.lang.String toOctalString(long);
+    public static java.lang.String toBinaryString(long);
+    public static java.lang.String toString(long);
+    public static long parseLong(java.lang.String,int);
+    public static long parseLong(java.lang.String);
+    public static java.lang.Long valueOf(java.lang.String,int);
+    public static java.lang.Long valueOf(java.lang.String);
+    public static java.lang.Long valueOf(long);
+    public static java.lang.Long decode(java.lang.String);
+    public static java.lang.Long getLong(java.lang.String);
+    public static java.lang.Long getLong(java.lang.String,long);
+    public static java.lang.Long getLong(java.lang.String,java.lang.Long);
+    public static long highestOneBit(long);
+    public static long lowestOneBit(long);
+    public static int numberOfLeadingZeros(long);
+    public static int numberOfTrailingZeros(long);
+    public static int bitCount(long);
+    public static long rotateLeft(long,int);
+    public static long rotateRight(long,int);
+    public static long reverse(long);
+    public static int signum(long);
+    public static long reverseBytes(long);
+    public int compareTo(java.lang.Long);
+    public static java.lang.String toString(float);
+    public static java.lang.String toHexString(float);
+    public static java.lang.Float valueOf(java.lang.String);
+    public static java.lang.Float valueOf(float);
+    public static float parseFloat(java.lang.String);
+    public static boolean isNaN(float);
+    public static boolean isInfinite(float);
+    public static int floatToIntBits(float);
+    public static int floatToRawIntBits(float);
+    public static float intBitsToFloat(int);
+    public static int compare(float,float);
+    public boolean isNaN();
+    public boolean isInfinite();
+    public int compareTo(java.lang.Float);
+    public static java.lang.String toString(double);
+    public static java.lang.String toHexString(double);
+    public static java.lang.Double valueOf(java.lang.String);
+    public static java.lang.Double valueOf(double);
+    public static double parseDouble(java.lang.String);
+    public static boolean isNaN(double);
+    public static boolean isInfinite(double);
+    public static long doubleToLongBits(double);
+    public static long doubleToRawLongBits(double);
+    public static double longBitsToDouble(long);
+    public static int compare(double,double);
+    public boolean isNaN();
+    public boolean isInfinite();
+    public int compareTo(java.lang.Double);
+    public <init>(byte);
+    public <init>(short);
+    public <init>(int);
+    public <init>(long);
+    public <init>(float);
+    public <init>(double);
+    public <init>(java.lang.String);
+    public byte byteValue();
+    public short shortValue();
+    public int intValue();
+    public long longValue();
+    public float floatValue();
+    public double doubleValue();
+    public int compareTo(java.lang.Object);
+    public boolean equals(java.lang.Object);
+    public int hashCode();
+    public java.lang.String toString();
+}
+
+# End NetworkBench Lens
