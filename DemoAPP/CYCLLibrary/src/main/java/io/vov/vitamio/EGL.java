@@ -44,6 +44,7 @@ public class EGL {
     mEGLConfigChooser = new SimpleEGLConfigChooser();
     mEGLContextFactory = new EGLContextFactory();
     mEGLWindowSurfaceFactory = new EGLWindowSurfaceFactory();
+
   }
 
   public boolean initialize(Surface surface) {
