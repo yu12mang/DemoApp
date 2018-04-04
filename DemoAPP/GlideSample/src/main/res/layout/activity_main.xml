@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context="com.example.glidesample.MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerInParent="true"
+        />
+    <Button
+        android:id="@+id/btn_thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="缩略图"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/btn_cut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btn_thumbnail"
+        android:layout_marginLeft="10dp"
+        android:text="裁剪"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/btn_translation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btn_cut"
+        android:layout_marginLeft="10dp"
+        android:text="圆角旋转"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/btn_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btn_translation"
+        android:layout_marginLeft="10dp"
+        android:text="动画"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
