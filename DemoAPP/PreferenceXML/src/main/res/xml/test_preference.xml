@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen  xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <PreferenceScreen
+        android:key="screen"
+        android:title="进入二层设置"
+        android:summary="进入二层设置"
+        >
+        <SwitchPreference
+            android:key="switch"
+            android:title="switchPreference"
+            android:summary="switch it"
+            />
+        <EditTextPreference
+            android:key="edit"
+            android:title="editPreference"
+            android:summary="OK"
+            />
+    </PreferenceScreen>
+
+    <CheckBoxPreference
+        android:key="checkbox"
+        android:title="单选设置"
+        android:summary="单选设置"
+        />
+
+    <RingtonePreference
+        android:key="ring"
+        android:title="铃声选择"
+        android:summary="铃声设置"
+       />
+
+
+    <PreferenceCategory
+        android:key="category"
+        android:title="使设置更有层次感 美观"
+        >
+        <EditTextPreference
+            android:key="edit"
+            android:title="category"
+            android:summary="OK"
+            />
+    </PreferenceCategory>
+
+    <ListPreference
+        android:key="list"
+        android:title="单选list"
+        android:entries="@array/entry_list"
+        android:entryValues="@array/values_list"
+        android:dialogTitle="list dialogtitle"
+        android:defaultValue="0"
+        />
+    <MultiSelectListPreference
+        android:key="list"
+        android:title="多选list"
+        />
+
+</PreferenceScreen>

@@ -4,8 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CYCLLibrary/CYCLLibrary.iml" filepath="$PROJECT_DIR$/CYCLLibrary/CYCLLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/DemoAPP.iml" filepath="$PROJECT_DIR$/DemoAPP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EventBusDemo/EventBusDemo.iml" filepath="$PROJECT_DIR$/EventBusDemo/EventBusDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/GlideSample/GlideSample.iml" filepath="$PROJECT_DIR$/GlideSample/GlideSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/InitActivity/InitActivity.iml" filepath="$PROJECT_DIR$/InitActivity/InitActivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JniLogHelper/JniLogHelper.iml" filepath="$PROJECT_DIR$/JniLogHelper/JniLogHelper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PreferenceXML/PreferenceXML.iml" filepath="$PROJECT_DIR$/PreferenceXML/PreferenceXML.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/cmdlist/cmdlist.iml" filepath="$PROJECT_DIR$/cmdlist/cmdlist.iml" />
       <module fileurl="file://$PROJECT_DIR$/configdemo/configdemo.iml" filepath="$PROJECT_DIR$/configdemo/configdemo.iml" />

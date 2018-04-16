@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="entry_list">
+        <item>total</item>
+        <item>check</item>
+        <item>airplace</item>
+    </string-array>
+    <string-array name="values_list">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>
