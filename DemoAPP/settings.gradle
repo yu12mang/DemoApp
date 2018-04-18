@@ -1,1 +1,1 @@
-include ':app', ':configdemo', ':seekbardemo', ':cmdlist', ':cmdlist', ':sockettest', ':sockettest', ':otademo', ':InitActivity', ':vitamioplayer', ':vlc-android-sdk-master', ':vlcdemo', ':CYCLLibrary', ':GlideSample', ':PreferenceXML', ':JniLogHelper', ':EventBusDemo'
+include ':app', ':configdemo', ':seekbardemo', ':cmdlist', ':cmdlist', ':sockettest', ':sockettest', ':otademo', ':InitActivity', ':vitamioplayer', ':vlc-android-sdk-master', ':vlcdemo', ':CYCLLibrary', ':GlideSample', ':PreferenceXML', ':JniLogHelper', ':EventBusDemo', ':RxJavaDemo'
