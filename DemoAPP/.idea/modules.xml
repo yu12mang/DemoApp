@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/InitActivity/InitActivity.iml" filepath="$PROJECT_DIR$/InitActivity/InitActivity.iml" />
       <module fileurl="file://$PROJECT_DIR$/JniLogHelper/JniLogHelper.iml" filepath="$PROJECT_DIR$/JniLogHelper/JniLogHelper.iml" />
       <module fileurl="file://$PROJECT_DIR$/PreferenceXML/PreferenceXML.iml" filepath="$PROJECT_DIR$/PreferenceXML/PreferenceXML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RetrofitDemo/RetrofitDemo.iml" filepath="$PROJECT_DIR$/RetrofitDemo/RetrofitDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/RxJavaDemo/RxJavaDemo.iml" filepath="$PROJECT_DIR$/RxJavaDemo/RxJavaDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/cmdlist/cmdlist.iml" filepath="$PROJECT_DIR$/cmdlist/cmdlist.iml" />
