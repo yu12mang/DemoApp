@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/CYCLLibrary" />
+            <option value="$PROJECT_DIR$/DialogViewpager" />
             <option value="$PROJECT_DIR$/EventBusDemo" />
             <option value="$PROJECT_DIR$/GlideSample" />
             <option value="$PROJECT_DIR$/InitActivity" />
@@ -20,6 +21,7 @@
             <option value="$PROJECT_DIR$/cmdlist" />
             <option value="$PROJECT_DIR$/configdemo" />
             <option value="$PROJECT_DIR$/otademo" />
+            <option value="$PROJECT_DIR$/pager-bottom-tab-strip" />
             <option value="$PROJECT_DIR$/seekbardemo" />
             <option value="$PROJECT_DIR$/sockettest" />
             <option value="$PROJECT_DIR$/vitamioplayer" />

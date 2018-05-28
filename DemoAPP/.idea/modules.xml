@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CYCLLibrary/CYCLLibrary.iml" filepath="$PROJECT_DIR$/CYCLLibrary/CYCLLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/DemoAPP.iml" filepath="$PROJECT_DIR$/DemoAPP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DialogViewpager/DialogViewpager.iml" filepath="$PROJECT_DIR$/DialogViewpager/DialogViewpager.iml" />
       <module fileurl="file://$PROJECT_DIR$/EventBusDemo/EventBusDemo.iml" filepath="$PROJECT_DIR$/EventBusDemo/EventBusDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/GlideSample/GlideSample.iml" filepath="$PROJECT_DIR$/GlideSample/GlideSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/InitActivity/InitActivity.iml" filepath="$PROJECT_DIR$/InitActivity/InitActivity.iml" />
@@ -15,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/cmdlist/cmdlist.iml" filepath="$PROJECT_DIR$/cmdlist/cmdlist.iml" />
       <module fileurl="file://$PROJECT_DIR$/configdemo/configdemo.iml" filepath="$PROJECT_DIR$/configdemo/configdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/otademo/otademo.iml" filepath="$PROJECT_DIR$/otademo/otademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pager-bottom-tab-strip/pager-bottom-tab-strip.iml" filepath="$PROJECT_DIR$/pager-bottom-tab-strip/pager-bottom-tab-strip.iml" />
       <module fileurl="file://$PROJECT_DIR$/seekbardemo/seekbardemo.iml" filepath="$PROJECT_DIR$/seekbardemo/seekbardemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/sockettest/sockettest.iml" filepath="$PROJECT_DIR$/sockettest/sockettest.iml" />
       <module fileurl="file://$PROJECT_DIR$/vitamioplayer/vitamioplayer.iml" filepath="$PROJECT_DIR$/vitamioplayer/vitamioplayer.iml" />
